@@ -1,0 +1,104 @@
+# Fichiers système et temporaires
+.DS_Store
+Thumbs.db
+*.log
+*.cache
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Fichiers de configuration de l'IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Fichiers générés par le système d'exploitation
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+
+# Caches
+cache/
+tmp/
+*.cache
+
+# Fichiers Composer
+/vendor/
+composer.lock
+
+# Environnement local
+.env
+.env.*.local
+
+# Fichiers de déploiement
+deploy.sh
+
+# Fichiers Nodescript.js et compilations front-end
+/node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+/public/build/
+public/css/
+public/js/
+public/mix-manifest.json
+
+# Logs
+logs/
+*.log
+
+# Sessions de l'application
+sessions/
+
+# Répertoires de build (si vous utilisez un outil de build pour le front-end)
+build/
+
+# Fichiers spécifiques au framework PHP
+storage/
+storage/app/public
+storage/framework/cache
+storage/framework/sessions
+storage/framework/testing
+storage/framework/views
+storage/logs
+bootstrap/cache
+
+# Fichiers spécifiques à Symfony
+/var/
+/vendor/
+/.env.local
+/.env.local.php
+/.env.test
+/.env.test.local
+/phpunit.xml
+/phpunit.xml.dist
+
+# Fichiers de couverture de code
+/coverage/
+
+# Fichiers générés par PHPStorm
+.idea
+*.iml
+
+# Linting
+phpcs.xml
+phpcs.xml.dist
+phpmd.xml
+
+# Autres fichiers spécifiques
+composer.phar
+composer.lock
+yarn.lock
+build/
+
+# Ignorer les fichiers de synchronisation spécifiques à OS
+*~
+*.swp
+*.swo
+*.log
+*.bak
+*.tmp
+*.DS_Store
+Thumbs.db
