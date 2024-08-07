@@ -4,7 +4,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use App\Controller\ProductController;
 
-if (isset($_GET['id'])) {
+if (isset($_GET['id']) && !empty($_GET['id'])) {
     $controller = new ProductController();
     $controller->show($_GET['id']);
 } else {
