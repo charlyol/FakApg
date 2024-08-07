@@ -15,18 +15,31 @@ class ProductController
 
     public function index()
     {
-        // Page d'accueil
         $categories = $this->apiClient->fetchCategories();
-        $products = $this->apiClient->fetchProductsByCategory('jewelery');
+        $products = $this->apiClient->fetchHomePageProducts();
 
         require __DIR__ . '/../View/home.php';
     }
 
     public function show($productId)
     {
-        // Afficher un produit spécifique
-        $product = $this->apiClient->fetchProduct($productId);
+        try {
+            if (empty($productId)) {
+                throw new \Exception('Product ID is missing.');
+            }
 
-        require __DIR__ . '/../View/product.php';
+            $product = $this->apiClient->fetchProduct($productId);
+
+            if (!$product) {
+                throw new \Exception('Product not found.');
+            }
+
+            require __DIR__ . '/../View/product.php';
+        } catch (\Exception $e) {
+            error_log("Error fetching product: " . $e->getMessage());
+            require __DIR__ . '/../View/error.php'; // Assurez-vous d'avoir une vue d'erreur appropriée
+        }
     }
+
+
 }
