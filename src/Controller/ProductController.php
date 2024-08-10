@@ -28,6 +28,9 @@ class ProductController
                 throw new \Exception('Product ID is missing.');
             }
 
+            // Récupération des catégories
+            $categories = $this->apiClient->fetchCategories();
+
             $product = $this->apiClient->fetchProduct($productId);
 
             if (!$product) {
@@ -37,9 +40,10 @@ class ProductController
             require __DIR__ . '/../View/product.php';
         } catch (\Exception $e) {
             error_log("Error fetching product: " . $e->getMessage());
-            require __DIR__ . '/../View/error.php'; // Assurez-vous d'avoir une vue d'erreur appropriée
+            require __DIR__ . '/../View/error.php';
         }
     }
+
 
 
 }

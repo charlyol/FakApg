@@ -44,7 +44,7 @@ class ApiClient
                 }
 
                 shuffle($categoryProducts);
-                $selectedProducts = array_slice($categoryProducts, 0, 2);
+                $selectedProducts = array_slice($categoryProducts, 0, 3);
                 $products = array_merge($products, $selectedProducts);
             } catch (\Exception $e) {
                 // Log the exception or handle it

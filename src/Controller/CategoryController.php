@@ -16,6 +16,8 @@ class CategoryController
     public function index($categoryName)
     {
         try {
+            $categories = $this->apiClient->fetchCategories();
+
             $products = $this->apiClient->fetchProductsByCategory($categoryName);
 
             if (empty($products)) {
@@ -27,7 +29,7 @@ class CategoryController
             require __DIR__ . '/../View/category.php';
         } catch (\Exception $e) {
             $message = "An error occurred while fetching products: " . $e->getMessage();
-            require __DIR__ . '/../View/error.php'; // Assurez-vous d'avoir une vue d'erreur appropriée
+            require __DIR__ . '/../View/error.php';
         }
     }
 }
