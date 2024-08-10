@@ -1,0 +1,42 @@
+
+body {
+    background-color : #268aac !important;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.btn-primary {
+    margin-top: auto;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
